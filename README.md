@@ -25,7 +25,7 @@ Caso não tenha instalado, aqui alguns links de referência:
 Com o git instalado e em um diretório da sua escolha, baixe o projeto:
 
 ```sh
-git clone https://github.com/YolandoQ/test-solution.git
+git clone https://github.com/YolandoQ/test-solution-2.git
 ```
 
 ##### Suba o serviço
