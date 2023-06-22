@@ -44,16 +44,12 @@ Com o container rodando, execute esse comando na raiz do projeto:
 docker exec -it laravel bash
 ```
 ##### Configure o .env
-Se não tiver alterado nada, o .env ja vai estar configurado depois de rodar seguintes comandos:
+Se não tiver alterado nada, o .env ja vai estar configurado depois de rodar o seguinte comando:
 
 ```sh
 cp .env.example .env
 ```
 (Importante verificar no .env se existe essa informação que é necessária para a camada de autenticação => APP_HASH_AUTH="MASTERDAWEB")
-
-```sh
-php artisan key:generate
-```
 
 ##### Instale as dependências
 Agora você pode executar:
@@ -69,7 +65,7 @@ São elas storage/logs e storage/framework, como estamos num ambiente de testes 
 chmod -R 777 storage/logs storage/framework
 ```
 
-##### Pra finalizar vamos rodar as migrations e a seeder
+##### Pra finalizar vamos rodar as migrations, a seeder e gerar a chave da aplicação
 Caso não tenha alterado credenciais nos arquivo do docker basta rodar os comandos de sempre:
 
 ```sh
@@ -78,6 +74,10 @@ php artisan migrate
 
 ```sh
 php artisan db:seed --class=ProductsTableSeeder
+```
+
+```sh
+php artisan key:generate
 ```
 
 Pronto, agora é só partir pro abraço, acesse o projeto na porta configurada(localhost:9001 se nada tiver sido alterado nos arquivos de configuração do docker).
